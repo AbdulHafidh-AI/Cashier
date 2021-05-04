@@ -12,7 +12,7 @@ int main()
     {
         panjang++;
     }
-    printf("%d", panjang);
+    printf("Panjang array = %d", panjang);
     
     for (int i = panjang; i >= 0 ;i--)
     {
