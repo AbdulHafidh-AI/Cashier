@@ -4,6 +4,7 @@ int main()
     // Inisialisasi Variabel
     char kalimat[100];
     // User Input Kalimat
+    printf("=== Program membalikan kalimat ===\n");
     printf("Masukan sebuah kalimat: ");
     scanf("%[^\n]s",kalimat);
     // Cari panjang array yang keiisi
@@ -12,7 +13,7 @@ int main()
     {
         panjang++;
     }
-    printf("Panjang array = %d", panjang);
+    printf("Panjang array = %d\n", panjang);
     
     for (int i = panjang; i >= 0 ;i--)
     {
