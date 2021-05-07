@@ -1,12 +1,20 @@
 //Dibuat Oleh Abdul Hafidh
 #include <stdio.h> 
+#include <stdlib.h>
 #include <time.h> // Karena ada waktu
+char *tzstr; // Time zone
 int main(){
     int shampoo,pastaGigi,sikatGigi,sabun,tepung,Minyak,telur; // Barang
     int shampoo2,pastaGigi2,sikatGigi2,sabun2,tepung2,Minyak2,telur2;
     int total_harga;
     int uang;
     int kembalian;
+    time_t t; // variabel untuk menyimpan data yang bertipe time
+    struct tm *gmt, *area; // Ini mengembalikan pointer dalam bentuk struktur tm,
+    putenv(tzstr); // Untuk mengeksekusi
+    tzset(); // Fungsi dari library time.h
+    t = time(NULL);
+    area = localtime(&t); 
     printf("SELEMAT DATANG DI SWALAYAN PANIK GA?\n");
     printf("=====================================\n");
     printf("Masukan Belanjaan Anda\n");
@@ -47,7 +55,7 @@ int main(){
     printf("\t SWALAYAN PANIK GA?\n");
     printf("JL. T. NYAK ARIEF - KOPELMA DARUSSALAM\n");
     printf("-------------------------------------------\n");
-    printf("Cuman waktu yang belum tahu \n"); // Ada yang tau ga cara cetak waktu saat ini? 
+    printf("\t%s \n",asctime(area)); // Ada yang tau ga cara cetak waktu saat ini?
     printf("-------------------------------------------\n");
     printf("Nama barang \t jmlh \t harga \t total\n");
     printf("shampoo     \t %d   \t 20000 \t %d\n",shampoo2,shampoo);
@@ -70,7 +78,6 @@ int main(){
     printf("-------------------------------------------\n");
     }else{
         printf("Uang Anda Tidak Cukup");
-    }
-    
+    } 
    return 0;
 }
