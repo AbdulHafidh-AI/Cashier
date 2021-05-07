@@ -55,7 +55,7 @@ int main(){
     printf("\t SWALAYAN PANIK GA?\n");
     printf("JL. T. NYAK ARIEF - KOPELMA DARUSSALAM\n");
     printf("-------------------------------------------\n");
-    printf("\t%s \n",asctime(area)); // Ada yang tau ga cara cetak waktu saat ini?
+    printf("\t%s \n",asctime(area));
     printf("-------------------------------------------\n");
     printf("Nama barang \t jmlh \t harga \t total\n");
     printf("shampoo     \t %d   \t 20000 \t %d\n",shampoo2,shampoo);
