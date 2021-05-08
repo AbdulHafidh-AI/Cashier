@@ -79,5 +79,6 @@ int main(){
     }else{
         printf("Uang Anda Tidak Cukup");
     } 
+    system("Pause");
    return 0;
 }
